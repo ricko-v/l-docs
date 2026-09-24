@@ -4,11 +4,21 @@ const siteURL = (process.env.NUXT_SITE_URL || 'http://localhost:3000').replace(/
 
 export default defineNuxtConfig({
   extends: ['docus'],
+  modules: ['@nuxtjs/i18n'],
+  i18n: {
+    baseUrl: siteURL,
+    defaultLocale: 'id',
+    locales: [
+      { code: 'id', language: 'id-ID', name: 'Bahasa Indonesia' },
+      { code: 'en', language: 'en-US', name: 'English' },
+    ],
+    detectBrowserLanguage: false,
+  },
   compatibilityDate: '2026-09-24',
   devtools: { enabled: false },
   app: {
     baseURL: appBaseURL,
-    head: { htmlAttrs: { lang: 'id' }, link: [{ rel: 'icon', type: 'image/svg+xml', href: appBaseURL + 'favicon.svg' }] },
+    head: { link: [{ rel: 'icon', type: 'image/svg+xml', href: appBaseURL + 'favicon.svg' }] },
   },
   site: { name: 'l — AWS Lambda CLI', url: siteURL },
   css: ['@fontsource-variable/manrope', '@fontsource-variable/jetbrains-mono'],

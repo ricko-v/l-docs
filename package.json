@@ -10,7 +10,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "check:output": "node scripts/check-output.mjs"
+    "check:output": "node scripts/check-output.mjs",
+    "postgenerate": "node scripts/write-redirects.mjs"
   },
   "engines": {
     "node": ">=22.18.0"
@@ -20,7 +21,8 @@
     "nuxt": "4.5.2",
     "better-sqlite3": "^12.11.1",
     "@fontsource-variable/manrope": "^5.2.8",
-    "@fontsource-variable/jetbrains-mono": "^5.2.8"
+    "@fontsource-variable/jetbrains-mono": "^5.2.8",
+    "@nuxtjs/i18n": "10.6.0"
   },
   "devDependencies": {
     "typescript": "^5.9.3"
