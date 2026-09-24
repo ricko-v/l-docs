@@ -1,0 +1,31 @@
+{
+  "name": "l-docs",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Dokumentasi pengguna @ricko-v/l \u2014 AWS Lambda dari terminal.",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "check:output": "node scripts/check-output.mjs"
+  },
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "dependencies": {
+    "docus": "5.13.0",
+    "nuxt": "4.5.2",
+    "better-sqlite3": "^12.11.1",
+    "@fontsource-variable/manrope": "^5.2.8",
+    "@fontsource-variable/jetbrains-mono": "^5.2.8"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "overrides": {
+    "sharp": "^0.35.4"
+  }
+}
