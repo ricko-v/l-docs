@@ -26,7 +26,8 @@ jobs:
           npm run generate
           npm run check:output
         env:
-          NUXT_APP_BASE_URL: ${{ steps.pages.outputs.base_path }}/
+          # NUXT_APP_BASE_URL: ${{ steps.pages.outputs.base_path }}/
+          NUXT_APP_BASE_URL: /
           NUXT_SITE_URL: ${{ steps.pages.outputs.base_url }}
       - uses: actions/upload-pages-artifact@v3
         with:
